@@ -7,11 +7,11 @@ const Section = () => {
     useEffect(()=>{
         fetch('Data.json')
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => setFood(data))
     },[])
     return (
         <div>
-             
+             <h1 className="text-3xl font-extrabold">Food:{food.length}</h1>
         </div>
     );
 };
